@@ -6,16 +6,18 @@ import { NetworkComponent } from './network/network.component';
 import { SitesComponent } from './sites/sites.component';
 import { SiteDetailsComponent } from './site-details/site-details.component';
 import { SiteComponent } from './site/site.component';
+import { NetworkDetailsComponent } from './network-details/network-details.component';
 
 const routes: Routes = [
   { path: 'network', component: NetworkComponent },
   { path: 'network/:networkId', component: NetworkComponent, children: [
     { path: '', component: SitesComponent, outlet: 'list' },
-    { path: '', component: SiteDetailsComponent, outlet: 'detail'},
-    { path: './site', component: SiteComponent, outlet: 'detail'},
-    { path: 'site/:siteId', component: SiteDetailsComponent, outlet: 'detail'}
-
+    { path: 'sites', component: NetworkDetailsComponent },
+    { path: 'site/:siteId', component: SiteDetailsComponent }
   ] },
+
+
+
 
 ];
 

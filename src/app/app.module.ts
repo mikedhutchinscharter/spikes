@@ -10,6 +10,7 @@ import { NetworkComponent } from './network/network.component';
 import { SitesComponent } from './sites/sites.component';
 import { SiteDetailsComponent } from './site-details/site-details.component';
 import { SiteComponent } from './site/site.component';
+import { NetworkDetailsComponent } from './network-details/network-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SiteComponent } from './site/site.component';
     NetworkComponent,
     SitesComponent,
     SiteDetailsComponent,
-    SiteComponent
+    SiteComponent,
+    NetworkDetailsComponent
   ],
   imports: [
     BrowserModule,

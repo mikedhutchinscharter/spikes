@@ -1,10 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>nets</h1>
-<ul>
-  <li *ngFor="let net of networks" >
-    <a [routerLink]="'/network/' + net.networkId">
-      {{net.name}}
-    </a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
+<div class="master-detail">
+  <div class="list">
+      <ul>
+          <li *ngFor="let net of networks" >
+            <a [routerLink]="'/network/' + net.networkId">
+              {{net.name}}
+            </a>
+          </li>
+        </ul>
+   </div>
+   <div class="detail">
+      <router-outlet></router-outlet>
+    </div>
+</div>
