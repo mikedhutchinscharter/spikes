@@ -11,6 +11,8 @@ import { SitesComponent } from './sites/sites.component';
 import { SiteDetailsComponent } from './site-details/site-details.component';
 import { SiteComponent } from './site/site.component';
 import { NetworkDetailsComponent } from './network-details/network-details.component';
+import { CircuitsListComponent } from './circuits-list/circuits-list.component';
+import { CircuitDetailsComponent } from './circuit-details/circuit-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NetworkDetailsComponent } from './network-details/network-details.compo
     SitesComponent,
     SiteDetailsComponent,
     SiteComponent,
-    NetworkDetailsComponent
+    NetworkDetailsComponent,
+    CircuitsListComponent,
+    CircuitDetailsComponent
   ],
   imports: [
     BrowserModule,

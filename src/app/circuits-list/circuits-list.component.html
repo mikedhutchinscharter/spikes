@@ -1,0 +1,4 @@
+<h4>Circuits</h4>
+<ul>
+  <li *ngFor="let circuit of circuits"><a [routerLink]="'circuits/' + circuit.circuitId">{{circuit.name}}</a></li>
+</ul>

@@ -7,18 +7,20 @@ import { SitesComponent } from './sites/sites.component';
 import { SiteDetailsComponent } from './site-details/site-details.component';
 import { SiteComponent } from './site/site.component';
 import { NetworkDetailsComponent } from './network-details/network-details.component';
+import { CircuitsListComponent } from './circuits-list/circuits-list.component';
+import { CircuitDetailsComponent } from './circuit-details/circuit-details.component';
 
 const routes: Routes = [
-  { path: 'network', component: NetworkComponent },
-  { path: 'network/:networkId', component: NetworkComponent, children: [
+  { path: '', redirectTo: 'networks', pathMatch: 'full' },
+  { path: 'networks', component: NetworkComponent },
+  { path: 'networks/:networkId', component: NetworkComponent, children: [
     { path: '', component: SitesComponent, outlet: 'list' },
     { path: 'sites', component: NetworkDetailsComponent },
-    { path: 'site/:siteId', component: SiteDetailsComponent }
+    { path: 'sites/:siteId', component: SiteDetailsComponent, children: [
+      { path: '', component: CircuitsListComponent, outlet: 'list' },
+      { path: 'circuits/:circuitId', component: CircuitDetailsComponent }
+     ] }
   ] },
-
-
-
-
 ];
 
 @NgModule({

@@ -1,8 +1,8 @@
 <ul>
   <li>
-    <a [routerLink]="'/network/' + networkId + '/sites'">Sites</a>
+    <a [routerLink]="'/networks/' + networkId + '/sites'">Sites</a>
   </li>
   <li *ngFor="let site of sites">
-    <a [routerLink]="'/network/' + networkId + '/site/' + site.siteId">{{site.name}}</a>
+    <a [routerLink]="'/networks/' + networkId + '/sites/' + site.siteId">{{site.name}}</a>
   </li>
 </ul>

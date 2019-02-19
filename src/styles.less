@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@list-width: 150px;
 .master-detail {
   .list {
     display: inline-block;
-    width: 40%;
+    max-width: @list-width;
     vertical-align: top;
   }
   .detail {
     display: inline-block;
     vertical-align: top;
-    width: 60%;
+    width: ~"calc(100% - @{list-width})";
   }
 }
+
