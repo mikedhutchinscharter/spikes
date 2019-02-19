@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let site of sites">
+    <a [routerLink]="'/network/' + networkId + '/site/' + site.siteId">{{site.name}}</a>
+  </li>
+</ul>
